@@ -1,0 +1,119 @@
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      body {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+  
+      /* Container principal da TV */
+      .tv-container {
+        width: 500px;
+        height: 350px;
+        background-color: #08131b;
+        border-radius: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 3px 10px rgba(226, 21, 21, 0.329);
+      }
+  
+      /* Tela interna */
+      .screen {
+        width: 350px;
+        height: 200px;
+        background-color: #333;
+        display: grid;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-gap: 2px;
+      }
+  
+      /* Linhas principais */
+      .bars {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 140px;
+        grid-gap: 1px;
+      }
+  
+      /* Retângulos coloridos superiores */
+      .bar:nth-child(1) { background-color:#B7B7A6; }
+      .bar:nth-child(1):hover { background-color: #E0E445; }
+      .bar:nth-child(2) { background-color: #ffee00; }
+      .bar:nth-child(2):hover { background-color: #33ff57; }
+      .bar:nth-child(3) { background-color: #71C8BF; }
+      .bar:nth-child(3):hover { background-color: #5733ff; }
+      .bar:nth-child(4) { background-color: #7AC242; }
+      .bar:nth-child(4):hover { background-color: #ff33c9; }
+      .bar:nth-child(5) { background-color: #A761A9; }
+      .bar:nth-child(5):hover { background-color: #33c9ff; }
+      .bar:nth-child(6) { background-color: #EF573F; }
+      .bar:nth-child(6):hover { background-color: #c9ff33; }
+      .bar:nth-child(7) { background-color: #224095; }
+      .bar:nth-child(7):hover { background-color: #ff3366; }
+  
+      /* Segunda linha de retângulos */
+      .middle {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 25px;
+        grid-gap: 0px;
+      }
+  
+      .middle div:nth-child(1) { background-color: #204096; }
+      .middle div:nth-child(1):hover { background-color: #ff5733; }
+      .middle div:nth-child(2) { background-color: #061728; }
+      .middle div:nth-child(2):hover { background-color: #33ff57; }
+      .middle div:nth-child(3) { background-color: #AA5FA5; }
+      .middle div:nth-child(3):hover { background-color: #5733ff; }
+      .middle div:nth-child(4) { background-color: #031826; }
+      .middle div:nth-child(4):hover { background-color: #ff33c9; }
+      .middle div:nth-child(5) { background-color: #71C7BA; }
+      .middle div:nth-child(5):hover { background-color: #33c9ff; }
+      .middle div:nth-child(6) { background-color: #041827; }
+      .middle div:nth-child(6):hover { background-color: #c9ff33; }
+      .middle div:nth-child(7) { background-color: #FEFFFF; }
+      .middle div:nth-child(7):hover { background-color: #ff3366; }
+  
+      /* Área inferior com sub-divisões */
+      .bottom {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr 1fr 2fr 3fr;
+        height: 35px;
+        grid-gap: 2px;
+      }
+  
+      .bottom > div {
+        background-color: #000;
+        height: 100%;
+      }
+  
+      .bottom div:nth-child(1) { background-color: #374E54; }
+      .bottom div:nth-child(1):hover { background-color: #ff5733; }
+      .bottom div:nth-child(2) { background-color: #ffffff; }
+      .bottom div:nth-child(2):hover { background-color: #33ff57; }
+      .bottom div:nth-child(3) { background-color: #522A73; }
+      .bottom div:nth-child(3):hover { background-color: #5733ff; }
+      .bottom div:nth-child(4) { background-color: #000000; }
+      .bottom div:nth-child(4):hover { background-color: #ff33c9; }
+      .bottom div:nth-child(5) { background-color: #000000; }
+      .bottom div:nth-child(5):hover { background-color: #33c9ff; }
+      .bottom div:nth-child(6) { background-color: #404040; }
+      .bottom div:nth-child(6):hover { background-color: #c9ff33; }
+      .bottom div:nth-child(7) {
+        background: repeating-linear-gradient(
+          to right,
+          #000000,
+          #000000 10px,
+          #ffffff 10px,
+          #ffffff 20px
+        );
+      }
+      .bottom div:nth-child(7):hover { background-color: #ff3366; }
