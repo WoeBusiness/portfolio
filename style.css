@@ -1,14 +1,52 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Play-Bold" ;
+    src: url(fonts/Play-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Open-Sans" ;
+    src: url(fonts/OpenSans_Condensed-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Russo-One" ;
+    src: url(fonts/RussoOne-Regular.ttf) format('truetype');
+}
+
+
 body {
     background-color:#244094;
-    display: flex;
+    margin: 0;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: "Open-Sans";
+    font-style: normal;
+    font-weight: 400;  
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+section {
+    height: 100vh; /* Cada seção ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Transição suave */
+}
+
+#section1 {
+    background-color: #244094; /* Cor inicial */
+}
+
+#section2 {
+    background-color: #4b0082;
 }
 
 h1 {
@@ -30,10 +68,11 @@ h1 {
     justify-content: right;
     align-items: center;
 }
+
 .menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;/*espaço entre os itens*/
+    gap: 20px; /* espaço entre os itens */
 }
 
 .menu ul li {
@@ -43,11 +82,11 @@ h1 {
 .menu ul li a {
     text-decoration: none;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 16px;
     padding: 8px 35px;
     transition: background-color .10s, color 0.3s;
-    border-radius: 10px;/*arredonda a borda dos links*/
+    border-radius: 10px; /* arredonda a borda dos links */
 }
 
 .menu ul li a:hover {
@@ -64,7 +103,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 10px 10px rgba(226, 21, 21, 0.203);
+    box-shadow: 10px 10px 10px rgba(187, 5, 5, 0.671);
 }
 
 /* Tela interna */
