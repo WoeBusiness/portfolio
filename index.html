@@ -5,18 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Woe Business</title>
   <link rel="stylesheet" href="style.css"> <!-- Arquivo CSS externo -->
+  <script>
+    /*210-mamablock*/
+    (function(d) {
+      var config = {
+        kitId: 'lwe5nkr',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+    /*poppins*/
+     (function(d) {
+       var config = {
+        kitId: 'lwe5nkr',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+</script>
 </head>
 <body>
   <!-- Cabeçalho com menu -->
-  <header class="tv-header">
+  <header>
     <h1>Woe Business</h1>
     <nav class="menu">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="#ajuda">Ajuda</a></li>
-      </ul>
+      <a href="#inicio" style="background-color: #E0E445;
+      color: #08131b;
+      font-weight: 700;">Inicio</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <a href="#ajuda">Ajuda</a>
     </nav>
   </header>
 
@@ -27,7 +47,7 @@
     <div class="tv-container">
       <div class="screen">
         <!-- Linhas superiores -->
-        <div class="bars">
+          <div class="bars">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
