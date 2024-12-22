@@ -5,7 +5,7 @@ body {
     background-color:#061822;
     margin: 0;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     font-family: "mamablock-210", "poppins", sans-serif;
     font-weight: 400;
@@ -16,6 +16,32 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;/*Essa linha de código está arredondando as pontas do bloco do site*/
+    padding: 10px;
+    margin: auto;/*Esse é para centralizar o conteúdo independente do tamanho da tela*/
+}
+
+h1 {
+    color: #FFFFFF;
+    font-family: "mamablock-210";
+    font-size: 40px;
+}
+h2 {
+    font-family: "mamablock-210";
+    font-size: 45px;
+    padding-top: 60px;
+}
+h2:hover {
+    color: #E0E445;
+    font-size: 55px;
+    background: linear-gradient(to right, #244094, #061822, #244094); 
+    border-radius: 30px;
+    padding: 20px;
+    
 }
 
 section {
@@ -31,8 +57,35 @@ section {
     padding-top: 140px; /* Adiciona espaço para o cabeçalho */
 }
 
+#section2 p {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+#section2 h1 {
+    text-align: center;
+    margin-bottom: 50px;/* Adiciona espaço abaixo do título */
+    font-size: 50px;
+}
+#section2 > ul {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 #section2 {
-    background-color: #4b0082;
+    letter-spacing: 3px;
+    font-family: "poppins";
+    font-size: 20px;/*tamanho do texto*/
+    color: #FFFFFF;
+    background-color: #244094;
+    font-family: "poppins";
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: flex-start; /* Mantém o conteúdo no topo */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: justify; /* Garante centralização do texto */
+    padding-top: 20px; /* Adiciona espaço no topo da seção */
 }
 
 #section1, #section2 {
@@ -47,13 +100,6 @@ section {
     transform: translateY(10px);
 }
 
-
-h1 {
-    color: #FFFFFF;
-    
-
-}
-
 /* Cabeçalho */
 header {
     background-color: #061822;
@@ -64,11 +110,11 @@ header {
     display: flex; /* Define layout flexível */
     justify-content: space-between; /* Separa o título e o menu */
     align-items: center; /* Centraliza verticalmente */
-    margin: 15px;/*Adiciona espaço externo ao redor do cabeçalho*/
+    margin: 1px;/*Adiciona espaço externo ao redor do cabeçalho*/
     padding: 0 20px; /* Espaçamento interno lateral */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445);
     border-radius: 50px 0;
-    position: fixed; /* Ou "fixed" se quiser que o cabeçalho fique fixo no topo */
+    position: absolute; /* absolute fica no topo da primeira página Ou "fixed" se quiser que o cabeçalho fique fixo no topo */
     z-index: 10; /* Define o cabeçalho acima de outros elementos */
 }
 
@@ -108,7 +154,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 10px 10px 10px rgba(187, 5, 5, 0.671);
+    box-shadow: 10px 10px 10px rgba(1, 7, 15, 0.338);
     z-index: 1; /* A TV ficará abaixo do cabeçalho */
 }
 
@@ -206,13 +252,15 @@ background: repeating-linear-gradient(
 .bottom div:nth-child(7):hover { background-color: #ff3366; }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1080px){
+    #section2 {
+        font-size: 15px;
+    }
     header {
         flex-wrap: wrap; /* Permite que os itens do cabeçalho se ajustem */
         height: auto; /* Ajusta automaticamente a altura */
         padding: 20px; /* Reduz o espaçamento interno */
     }
-
     .menu {
         display: flex;
         flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */
@@ -223,6 +271,34 @@ background: repeating-linear-gradient(
     .menu a {
         padding: 5px 10px; /* Links mais compactos */
         font-size: 14px; /* Texto menor para links */
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h2:hover {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Permite que os itens do cabeçalho se ajustem */
+        height: auto; /* Ajusta automaticamente a altura */
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */
+        justify-content: center; /* Centraliza os links */
+        gap: 10px; /* Reduz o espaço entre os links */
+    }
+
+    .menu a {
+        padding: 5px 10px; /* Links mais compactos */
+        font-size: 14px; /* Texto menor para links */
+    }
+    #section2 {
+        font-size: 11px;
     }
 }
 

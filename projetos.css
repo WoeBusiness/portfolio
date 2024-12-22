@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+
+body {
+    background-color:#061822;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "mamablock-210", "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    font-family: "poppins";
+    height: 100vh; /* Cada seção ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Transição suave */
+}
+
+#section1 {
+    background-color: #244094; /* Cor inicial */
+    /*padding-top: 140px; /* Adiciona espaço para o cabeçalho */
+}
+
+#section2 {
+    background-color: #4b0082;
+    
+}
+#section3 {
+    background-color: #E0E445 ;
+
+}
+
+#section1, #section2, #section3 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#section1:hover, #section2:hover {
+    transform: translateY(10px);
+}
+
+
+h1 {
+    color: #FFFFFF;
+    font-size: 40px;
+    
+
+}
+
+/* Cabeçalho */
+header {
+    background-color: #061822;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 120px;
+    display: flex; /* Define layout flexível */
+    justify-content: space-between; /* Separa o título e o menu */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 1px;/*Adiciona espaço externo ao redor do cabeçalho*/
+    padding: 0 20px; /* Espaçamento interno lateral */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445);
+    border-radius: 50px 0;
+    position: fixed; /* Ou "fixed" se quiser que o cabeçalho fique fixo no topo */
+    z-index: 10; /* Define o cabeçalho acima de outros elementos */
+}
+
+/* Menu */
+.menu {
+    display: flex; /* Alinha os itens horizontalmente */
+    flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */
+    justify-content: center; /* Centraliza os links */
+    gap: 90px; /* Espaço entre os links */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: "poppins", sans-serif;
+    font-size: 18px;/*tamanho da fonte*/
+    font-weight:200;
+    padding: 16px 16px;/*tamanho do quadrado em volta dos links*/
+    transition: background-color 0.1s, color 0.3s;
+    border-radius: 5px; /* Arredonda as bordas dos links */
+}
+
+.menu a:hover {
+    background-color: #E0E445;
+    color: #08131b;
+    font-weight: 700;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Permite que os itens do cabeçalho se ajustem */
+        height: auto; /* Ajusta automaticamente a altura */
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */
+        justify-content: center; /* Centraliza os links */
+        gap: 10px; /* Reduz o espaço entre os links */
+    }
+
+    .menu a {
+        padding: 5px 10px; /* Links mais compactos */
+        font-size: 14px; /* Texto menor para links */
+    }
+}
+
+
+
+@media (max-width: 480px){
+    header {
+        flex-wrap: wrap; /* Permite que os itens do cabeçalho se ajustem */
+        height: auto; /* Ajusta automaticamente a altura */
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */
+        justify-content: center; /* Centraliza os links */
+        gap: 10px; /* Reduz o espaço entre os links */
+    }
+
+    .menu a {
+        padding: 5px 10px; /* Links mais compactos */
+        font-size: 10px; /* Texto menor para links */
+
+    }
+
+    .project {
+        width: 100%;
+    }
+}
