@@ -28,12 +28,12 @@ section {
 }
 
 #section1 {
-    background-color: #244094; /* Cor inicial */
+    background-color: #dfe445; /* Cor inicial */
     /*padding-top: 140px; /* Adiciona espaço para o cabeçalho */
 }
 
 #section2 {
-    background-color: #4b0082;
+    background-color: #E0E445;
     
 }
 #section3 {
@@ -49,7 +49,7 @@ section {
     transition: transform 0.3s ease;
 }
 
-#section1:hover, #section2:hover {
+#section1:hover, #section2:hover, #section3:hover {
     transform: translateY(10px);
 }
 
@@ -75,7 +75,7 @@ header {
     padding: 0 20px; /* Espaçamento interno lateral */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445);
     border-radius: 50px 0;
-    position: fixed; /* Ou "fixed" se quiser que o cabeçalho fique fixo no topo */
+    position: absolute; /* Ou "fixed" se quiser que o cabeçalho fique fixo no topo */
     z-index: 10; /* Define o cabeçalho acima de outros elementos */
 }
 
@@ -105,14 +105,35 @@ header {
 }
 
 
+
 /* Responsividade */
+@media (max-width: 1080px){
+    #section2 {
+        font-size: 15px;
+    }
+    header {
+        flex-wrap: wrap; /* Permite que os itens do cabeçalho se ajustem */
+        height: auto; /* Ajusta automaticamente a altura */
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */
+        justify-content: center; /* Centraliza os links */
+        gap: 10px; /* Reduz o espaço entre os links */
+    }
+
+    .menu a {
+        padding: 5px 10px; /* Links mais compactos */
+        font-size: 14px; /* Texto menor para links */
+    }
+}
 @media (max-width: 768px) {
     header {
         flex-wrap: wrap; /* Permite que os itens do cabeçalho se ajustem */
         height: auto; /* Ajusta automaticamente a altura */
         padding: 20px; /* Reduz o espaçamento interno */
     }
-
     .menu {
         display: flex;
         flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */

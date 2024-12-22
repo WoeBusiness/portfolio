@@ -12,6 +12,7 @@ body {
     font-style: normal;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -24,24 +25,21 @@ main {
     padding: 10px;
     margin: auto;/*Esse é para centralizar o conteúdo independente do tamanho da tela*/
 }
+main  a {
+    font-family: "mamablock-210"; 
+    font-size: 25px; 
+    padding-top: 50px;
+    text-decoration: none;
+    color: #E0E445;
+}
 
+main a:hover {
+    font-size: 30px;
+}
 h1 {
     color: #FFFFFF;
     font-family: "mamablock-210";
     font-size: 40px;
-}
-h2 {
-    font-family: "mamablock-210";
-    font-size: 45px;
-    padding-top: 60px;
-}
-h2:hover {
-    color: #E0E445;
-    font-size: 55px;
-    background: linear-gradient(to right, #244094, #061822, #244094); 
-    border-radius: 30px;
-    padding: 20px;
-    
 }
 
 section {
@@ -272,14 +270,7 @@ background: repeating-linear-gradient(
         padding: 5px 10px; /* Links mais compactos */
         font-size: 14px; /* Texto menor para links */
     }
-    h2 {
-        font-size: 25px;
-    }
-    h2:hover {
-        font-size: 30px;
-    }
 }
-
 @media (max-width: 768px) {
     header {
         flex-wrap: wrap; /* Permite que os itens do cabeçalho se ajustem */
@@ -298,7 +289,7 @@ background: repeating-linear-gradient(
         font-size: 14px; /* Texto menor para links */
     }
     #section2 {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
 
