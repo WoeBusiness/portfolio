@@ -19,6 +19,7 @@ body {
 }
 
 section {
+    background-color: #542A72;
     font-family: "poppins";
     height: 100vh; /* Cada seção ocupa toda a altura da tela */
     display: flex;
@@ -28,16 +29,16 @@ section {
 }
 
 #section1 {
-    background-color: #dfe445; /* Cor inicial */
+    
     /*padding-top: 140px; /* Adiciona espaço para o cabeçalho */
 }
 
 #section2 {
-    background-color: #E0E445;
+   
     
 }
 #section3 {
-    background-color: #E0E445 ;
+    
 
 }
 
