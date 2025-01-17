@@ -25,6 +25,7 @@
           },
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
+
     </script>
 </head>
 <body>
@@ -40,6 +41,7 @@
       <a href="#ajuda">Ajuda</a>
     </nav>
   </header>
+
   <section class="projetos">
     <h2 class="titulo-principal">
       O que podemos fazer <span>juntos?</span>
@@ -55,7 +57,7 @@
           <li>Produção Criativa</li>
           <li>Studio de PodCast</li>
         </ul>
-        <a href="#" class="botao">Acessar portfólio</a>
+        <a href="#" id="btn1" class="botao" data-target="tab1">Acessar portfólio</a>
       </div>
       <div class="card">
         <h3>Design</h3>
@@ -67,7 +69,7 @@
           <li>Embalagens</li>
           <li>Ilustrações Personalizadas</li>
         </ul>
-        <a href="#" class="botao">Acessar Portfólio</a>
+        <a href="#" id="btn2" class="botao" data-target="tab2">Acessar Portfólio</a>
       </div>
       <div class="card">
         <h3>Social Media</h3>
@@ -79,10 +81,121 @@
           <li>Patrocinados</li>
           <li>Interação com o Público</li>
         </ul>
-        <a href="#" class="botao">Acessar Portfólio</a>
+        <a href="#" id="btn3" class="botao" data-target="tab3">Acessar Portfólio</a>
       </div>
     </div>
   </section>
   
+  <div class="triangle" id="triangle"></div>
+
+
+  <!-- As seções estão fechadas inicialmente (display: none) -->
+  <section class="portfolio-tab" id="tab1">
+    <div class="tab-content">
+      <button class="close-btn">X</button>
+      <img src="images/" alt="Imagem 1">
+      <p>Comentário sobre a Produção Audiovisual. A imagem foi capturada durante um evento especial.</p>
+    </div>
+  </section>
+
+  <section class="portfolio-tab" id="tab2">
+    <div class="tab-content">
+      <button class="close-btn">X</button>
+      <img src="images/portfolio2.jpg" alt="Imagem 2">
+      <p>Comentário sobre Design. A imagem mostra alguns dos nossos projetos de design gráfico e identidade visual.</p>
+    </div>
+  </section>
+
+  <section class="portfolio-tab" id="tab3">
+    <div class="tab-content">
+      <button class="close-btn">X</button>
+      <img src="images/portfolio3.jpg" alt="Imagem 3">
+      <p>Comentário sobre Social Media. A imagem ilustra nossa abordagem para gerenciamento de redes sociais e campanhas publicitárias.</p>
+    </div>
+  </section>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Garante que as abas estão fechadas inicialmente
+    document.querySelectorAll('.portfolio-tab').forEach(tab => {
+        tab.style.display = 'none';
+    });
+
+    // Adiciona funcionalidade de abrir/fechar as abas ao clicar nos botões
+    const buttons = document.querySelectorAll('.botao');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Obtém a ID da aba correspondente
+            const tabId = button.id.replace('btn', 'tab');
+            const currentTab = document.getElementById(tabId);
+            
+            // Fecha todas as abas antes de abrir a nova
+            document.querySelectorAll('.portfolio-tab').forEach(tab => {
+                tab.style.display = 'none';
+            });
+
+            // Alterna a visibilidade da aba clicada
+            if (currentTab && (currentTab.style.display === 'none' || currentTab.style.display === '')) {
+                currentTab.style.display = 'flex'; // Abre a aba
+            }
+        });
+    });
+
+    // Funcionalidade para fechar as abas ao clicar no "x"
+    const closeButtons = document.querySelectorAll('.close-btn');
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const tab = btn.closest('.portfolio-tab');
+            if (tab) {
+                tab.style.display = 'none'; // Fecha a aba
+            }
+        });
+    });
+});
+
+      document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.botao');
+            const tabs = document.querySelectorAll('.portfolio-tab');
+            const triangle = document.getElementById('triangle');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = button.getAttribute('data-target');
+                    const targetTab = document.getElementById(targetId);
+                    const card = button.closest('.card');
+
+                    // Fecha todas as abas
+                    tabs.forEach(tab => tab.style.display = 'none');
+
+                    // Exibe a aba correspondente
+                    if (targetTab) {
+                        targetTab.style.display = 'flex';
+
+                        // Posição do triângulo
+                        const cardRect = card.getBoundingClientRect();
+                        const tabRect = targetTab.getBoundingClientRect();
+
+                        triangle.style.display = 'block';
+                        triangle.style.left = `${cardRect.left + cardRect.width / 2 - 15}px`;
+                        triangle.style.top = `${cardRect.bottom + window.scrollY}px`;
+                    }
+                });
+            });
+
+            document.querySelectorAll('.close-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    tabs.forEach(tab => tab.style.display = 'none');
+                    triangle.style.display = 'none';
+                });
+            });
+        });
+
+  </script>
 </body>
 </html>
