@@ -1,0 +1,96 @@
+
+@charset "UTF-8";
+
+body {
+    background-color:#5d94b2;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "mamablock-210", "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: #0b090d;
+    font-family: "poppins";
+    height: 99vh; /* Cada seção ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease; /* Transição suave */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #061822;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 120px;
+    display: flex; /* Define layout flexível */
+    justify-content: space-between; /* Separa o título e o menu */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 1px;/*Adiciona espaço externo ao redor do cabeçalho*/
+    padding: 0 20px; /* Espaçamento interno lateral */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445);
+    border-radius: 50px 0;
+    position: absolute; /* absolute fica no topo da primeira página Ou "fixed" se quiser que o cabeçalho fique fixo no topo */
+    z-index: 10; /* Define o cabeçalho acima de outros elementos */
+}
+
+/* Menu */
+.menu {
+    display: flex; /* Alinha os itens horizontalmente */
+    flex-wrap: wrap; /* Links se organizam em múltiplas linhas, se necessário */
+    justify-content: center; /* Centraliza os links */
+    gap: 90px; /* Espaço entre os links */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: "poppins", sans-serif;
+    font-size: 18px;/*tamanho da fonte*/
+    font-weight:200;
+    padding: 16px 16px;/*tamanho do quadrado em volta dos links*/
+    transition: background-color 0.1s, color 0.3s;
+    border-radius: 5px; /* Arredonda as bordas dos links */
+}
+
+.menu a:hover {
+    background-color: #E0E445;
+    color: #08131b;
+    font-weight: 700;
+}
+
+
+main {
+    background-color: white;
+    border-radius: 10px;/*Essa linha de código está arredondando as pontas do bloco do site*/
+    padding: 10px;
+    margin: auto;/*Esse é para centralizar o conteúdo independente do tamanho da tela*/
+}
+main  a {
+    font-family: "mamablock-210"; 
+    font-size: 5px; 
+    text-align: center;
+    text-decoration: none;
+    color: #542A72;
+}
+
+main a:hover {
+    font-size: 30px;
+}
+h1 {
+    color: #FFFFFF;
+    font-family: "mamablock-210";
+    font-size: 40px;
+}

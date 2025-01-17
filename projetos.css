@@ -241,7 +241,10 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.content-description p {
+    margin-top: 20px;
+    line-height: 20px;
+}
 /* Posicionamento intercalado */
 .content-image.left {
     order: 1;
