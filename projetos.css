@@ -21,7 +21,7 @@ body {
 section {
     background-color: #542A72;
     font-family: "poppins";
-    height: 100vh; /* Cada seção ocupa toda a altura da tela */
+    height: 99vh; /* Cada seção ocupa toda a altura da tela */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,9 +165,9 @@ header {
 /* Novo CSS para o conteúdo das abas */
 .portfolio-tab {
     display: none; /* As seções estão fechadas por padrão */
-    height: 100vh; /* A nova seção ocupa toda a altura da tela */
+    height: 500vh; /* A nova seção ocupa toda a altura da tela */
     width: 100%; /* Ocupa toda a largura */
-    background-color: #f4f4f4;
+    background-color: #E0E445;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +175,8 @@ header {
 }
 
 .tab-content {
-    width: 80%; /* Ajuste o tamanho do conteúdo dentro da seção */
+    height: 100%;
+    width: 100%; /* Ajuste o tamanho do conteúdo dentro da seção */
     text-align: center;
     background-color: white;
     border-radius: 8px;
@@ -183,41 +184,81 @@ header {
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.292);
 }
 
-.tab-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.tab-content p {
-    margin-top: 15px;
-    color: #333;
-}
 
 .close-btn {
     background: none;
    /* position: absolute;*/
     top: 10px;
     right: 10px;
-    background-color: #ff0000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #ff0000;
     border: none ;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     font-size: 20px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer;/*indica que é um item clicavel*/
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
 .close-btn:hover {
     background-color: #e60000;
+    color: #FFFFFF;
 }
+
+/* Estilizando o layout das imagens intercaladas com descrições */
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.content-image {
+    flex: 1;
+    text-align: center;
+}
+
+.content-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-description {
+    flex: 1;
+    padding: 20px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Posicionamento intercalado */
+.content-image.left {
+    order: 1;
+}
+
+.content-description.right {
+    order: 2;
+}
+
+.content-image.right {
+    order: 2;
+}
+
+.content-description.left {
+    order: 1;
+}
+
 
 .triangle {
     display: none; /* Oculto por padrão */
@@ -228,7 +269,7 @@ header {
     border-right: 15px solid transparent;
     border-bottom: 15px solid #947fa3; /* Cor do triângulo */
     z-index: 5; /* Para ficar acima dos cards */
-    transition: all 0.3s ease; /* Animação suave */
+    transition: all 0.5s ease; /* Animação suave */
   }
 
 

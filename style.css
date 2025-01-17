@@ -51,6 +51,7 @@ section {
 }
 
 #section1 {
+    height: 90vh;
     position: relative;
     overflow: hidden; /* Garante que a imagem não ultrapasse os limites visíveis */
     background-color: #dddddd; /* Cor inicial */
@@ -107,9 +108,9 @@ h3 {
 }
 .decoracao {    
     position: absolute;
-    top: 60px; /* Ajusta a posição vertical */
-    left: 830px; /* Ajusta a posição horizontal */
-    width: 1100px;
+    top: 52px; /* Ajusta a posição vertical */
+    left: 919px; /* Ajusta a posição horizontal */
+    width: 980px;
     height: auto;
     transform: translate(20px, 50px);/* Move a imagem */
 }
