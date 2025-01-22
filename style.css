@@ -109,7 +109,7 @@ h3 {
 .decoracao {    
     position: absolute;
     top: 52px; /* Ajusta a posição vertical */
-    left: 919px; /* Ajusta a posição horizontal */
+    left: 920px; /* Ajusta a posição horizontal */
     width: 980px;
     height: auto;
     transform: translate(20px, 50px);/* Move a imagem */
