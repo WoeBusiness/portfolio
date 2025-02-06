@@ -274,6 +274,33 @@ header {
     z-index: 5; /* Para ficar acima dos cards */
     transition: all 0.5s ease; /* Animação suave */
   }
+  .scroll-container {
+    width: 600px; /* Largura fixa do container */
+    height: 650px; /* Altura do container */
+    overflow-x: hidden; /* Desativa a rolagem horizontal */
+    overflow-y: auto; /* Permite a rolagem vertical */
+    display: flex; /* Flexbox para alinhar os itens */
+    flex-direction: column; /* Organiza os itens de forma vertical */
+    scroll-behavior: smooth; /* Rolagem suave */
+    border: 2px solid #ccc; /* Borda para visualização */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 5px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Fundo leve */
+    }
+
+    .scroll-content {
+    display: flex; /* Usamos flex para alinhar em coluna */
+    flex-direction: column; /* Organiza em coluna */
+    gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .scroll-content img,
+    .scroll-content video {
+    width: 100%; /* Ajusta a largura das imagens para o container */
+    border-radius: 8px; /* Cantos arredondados nas imagens e vídeos */
+    object-fit: cover; /* Ajusta o conteúdo das imagens/vídeos */
+    }
+
 
 
 /* Responsividade */
